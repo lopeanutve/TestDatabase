@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[IssueList] (
+    [PKID]       NCHAR (36)     CONSTRAINT [DF_IssueList_PKID] DEFAULT ('') NOT NULL,
+    [IssueNO]    NCHAR (36)     CONSTRAINT [DF_IssueList_IssueNO] DEFAULT ('') NOT NULL,
+    [InsuTyoeID] NCHAR (3)      CONSTRAINT [DF_IssueList_InsuTyoeID] DEFAULT ('') NOT NULL,
+    [Issue]      NVARCHAR (255) CONSTRAINT [DF_IssueList_Issue] DEFAULT ('') NOT NULL,
+    [IssueDD]    NCHAR (8)      CONSTRAINT [DF_IssueList_IssueDD] DEFAULT ('') NOT NULL,
+    [CustName]   NCHAR (10)     CONSTRAINT [DF_IssueList_CustName] DEFAULT ('') NOT NULL,
+    [EJNName]    NCHAR (10)     CONSTRAINT [DF_IssueList_EJNName] DEFAULT ('') NOT NULL,
+    [ifF]        NCHAR (1)      CONSTRAINT [DF_IssueList_ifF] DEFAULT ('N') NOT NULL,
+    [TestDD]     NCHAR (8)      CONSTRAINT [DF_IssueList_TestDD] DEFAULT ('') NOT NULL,
+    [RespDT]     DATETIME       CONSTRAINT [DF_IssueList_RespDT] DEFAULT ('') NOT NULL,
+    [ReleaseDT]  DATETIME       CONSTRAINT [DF_IssueList_ReleaseDT] DEFAULT ('') NOT NULL,
+    [mask]       TINYINT        CONSTRAINT [DF_IssueList_mask] DEFAULT ((7)) NOT NULL,
+    [CreateBy]   NVARCHAR (50)  CONSTRAINT [DF_IssueList_CreateBy] DEFAULT ('') NOT NULL,
+    [ReviseBy]   NVARCHAR (50)  CONSTRAINT [DF_IssueList_ReviseBy] DEFAULT ('') NOT NULL,
+    [DeleteBy]   NVARCHAR (50)  CONSTRAINT [DF_IssueList_DeleteBy] DEFAULT ('') NOT NULL,
+    [CreateTime] DATETIME       CONSTRAINT [DF_IssueList_CreateTime] DEFAULT (getdate()) NOT NULL,
+    [ReviseTime] DATETIME       CONSTRAINT [DF_IssueList_ReviseTime] DEFAULT (getdate()) NOT NULL,
+    [DeleteTime] DATETIME       NULL,
+    [CreateGrp]  NVARCHAR (255) CONSTRAINT [DF_IssueList_CreateGrp] DEFAULT ('') NOT NULL,
+    [ReviseGrp]  NVARCHAR (255) CONSTRAINT [DF_IssueList_ReviseGrp] DEFAULT ('') NOT NULL,
+    [DeleteGrp]  NVARCHAR (255) CONSTRAINT [DF_IssueList_DeleteGrp] DEFAULT ('') NOT NULL,
+    CONSTRAINT [PK_IssueList] PRIMARY KEY CLUSTERED ([PKID] ASC)
+);
+

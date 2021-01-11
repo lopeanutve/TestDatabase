@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [test]
+    WITH PASSWORD = N'zbGmeuplrQiT|||cctbukzgdmsFT7_&#$!~<gklgadvxy0dw', SID = 0x89709009DDB96949A799CD088D2917A7, DEFAULT_LANGUAGE = [繁體中文], CHECK_EXPIRATION = ON;
+
