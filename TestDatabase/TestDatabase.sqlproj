@@ -91,4 +91,7 @@
     <Build Include="Security\RoleMemberships.sql" />
     <Build Include="dbo\Stored Procedures\test.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\Script.PostDeployment1.sql" />
+  </ItemGroup>
 </Project>
